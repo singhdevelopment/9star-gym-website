@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9Star Gym | Premium Fitness Center</title>
+
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #0d0d0d;
+        color: white;
+    }
+
+    /* Common section spacing (reduced gap) */
+    section {
+        padding: 50px 20px;
+    }
+
+    /* Header */
+    header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background: rgba(0, 0, 0, 0.95);
+        padding: 12px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    }
+
+    header h1 {
+        margin: 0;
+        color: #FFD700;
+        font-size: clamp(24px, 5vw, 36px);
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 8px;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 6px 10px;
+        font-size: 14px;
+    }
+
+    nav a:hover {
+        color: #FFD700;
+    }
+
+    /* Buttons */
+    .btn {
+        margin-top: 20px;
+        padding: 12px 30px;
+        background: #FFD700;
+        color: black;
+        border: none;
+        border-radius: 30px;
+        font-weight: bold;
+        font-size: 18px;
+        cursor: pointer;
+    }
+
+    .btn:hover {
+        transform: scale(1.05);
+    }
+
+    /* Cards */
+    .card {
+        width: 300px;
+        background: #1a1a1a;
+        padding: 30px;
+        border-radius: 20px;
+        border: 2px solid #FFD700;
+        box-sizing: border-box;
+    }
+
+    .card h3 {
+        color: #FFD700;
+        margin-top: 0;
+    }
+
+    .grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+        margin-top: 40px;
+    }
+
+    .center-text {
+        text-align: center;
+    }
+
+    .dark-section {
+        background: #111;
+    }
+
+    /* Hero */
+    #home {
+        text-align: center;
+        padding: 100px 20px;
+        background: url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+    }
+
+    .hero-box {
+        background: rgba(0,0,0,0.75);
+        padding: 50px 30px;
+        border-radius: 20px;
+        max-width: 900px;
+        margin: auto;
+    }
+
+    /* WhatsApp floating */
+    .floating-whatsapp {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #25D366;
+        color: white;
+        padding: 15px 18px;
+        border-radius: 50%;
+        font-size: 28px;
+        text-decoration: none;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .card {
+            width: 100%;
+            max-width: 340px;
+        }
+
+        #home {
+            padding: 80px 15px;
+        }
+
+        .hero-box {
+            padding: 35px 20px;
+        }
+    }
+</style>
+</head>
+<body>
+
+<script>
+    /* Set your Google Form link only once here */
+    const GOOGLE_FORM_LINK = "https://forms.gle/mCp7QAupCVAocuSo8";
+
+    function openMembershipForm() {
+        window.open(GOOGLE_FORM_LINK, "_blank");
+    }
+</script>
+
+<!-- Header -->
+<header>
+    <h1>⭐ 9Star Gym</h1>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#plans">Plans</a>
+        <a href="#bmi">BMI</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<!-- Hero Section -->
+<section id="home">
+    <div class="hero-box">
+        <h2 style="font-size: clamp(36px, 8vw, 64px); color:#FFD700; margin-bottom:20px;">
+            Transform Your Body
+        </h2>
+
+        <p style="font-size: clamp(18px, 4vw, 24px); line-height:1.8; color:#eee;">
+            Premium fitness center in Mithapur, Patna with modern equipment,
+            expert trainers, and affordable membership plans.
+        </p>
+
+        <button class="btn" onclick="openMembershipForm()">
+            Apply for Membership
+        </button>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="dark-section center-text">
+    <h2 style="font-size:42px; color:#FFD700; margin-bottom:20px;">About 9Star Gym</h2>
+
+    <p style="max-width:950px; margin:auto; font-size:20px; line-height:1.9; color:#ddd;">
+        9Star Gym is your ultimate destination for bodybuilding, weight loss,
+        muscle gain, strength training, and overall fitness transformation.
+        Our mission is to provide a professional and motivating environment
+        where every member can achieve their fitness goals with confidence.
+    </p>
+
+    <p style="max-width:950px; margin:25px auto 0; font-size:19px; line-height:1.9; color:#ccc;">
+        We offer modern imported equipment, certified trainers, personalized
+        workout plans, nutrition guidance, and dedicated support for beginners
+        as well as advanced athletes.
+    </p>
+
+    <div class="grid">
+        <div class="card">
+            <div style="font-size:42px;">❄️</div>
+            <h3>Fully AC Environment</h3>
+            <p>Enjoy your workouts in a comfortable air-conditioned atmosphere.</p>
+        </div>
+
+        <div class="card">
+            <div style="font-size:42px;">🛡️</div>
+            <h3>Safe & Secure</h3>
+            <p>Clean, hygienic, and secure facilities for all members.</p>
+        </div>
+
+        <div class="card">
+            <div style="font-size:42px;">🏋️</div>
+            <h3>Modern Equipment</h3>
+            <p>Advanced cardio and strength machines for total transformation.</p>
+        </div>
+
+        <div class="card">
+            <div style="font-size:42px;">👨‍🏫</div>
+            <h3>Certified Trainers</h3>
+            <p>Experienced trainers to guide your fitness journey.</p>
+        </div>
+
+        <div class="card">
+            <div style="font-size:42px;">🥗</div>
+            <h3>Diet Guidance</h3>
+            <p>Customized nutrition recommendations for faster results.</p>
+        </div>
+
+        <div class="card">
+            <div style="font-size:42px;">🚿</div>
+            <h3>Clean Facilities</h3>
+            <p>Regularly sanitized equipment and hygienic environment.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Membership Plans -->
+<section id="plans" class="center-text">
+    <h2 style="font-size:42px; color:#FFD700;">Membership Plans</h2>
+
+    <p style="font-size:20px; color:#ddd; max-width:800px; margin:auto; line-height:1.8;">
+        Choose the membership plan that best fits your fitness goals and budget.
+    </p>
+
+    <div class="grid">
+
+        <!-- 1 Month -->
+        <div class="card">
+            <h3 style="font-size:28px;">1 Month</h3>
+            <p style="font-size:42px; font-weight:bold;">₹1,499</p>
+            <p>Unlimited Gym Access</p>
+            <p>Basic Guidance</p>
+            <p>Cardio + Strength</p>
+            <button class="btn" onclick="openMembershipForm()">Join Now</button>
+        </div>
+
+        <!-- 3 Months -->
+        <div class="card">
+            <h3 style="font-size:28px;">3 Months</h3>
+            <p style="font-size:42px; font-weight:bold;">₹3,499</p>
+            <p>Diet Consultation</p>
+            <p>Workout Plan</p>
+            <p>Priority Support</p>
+            <button class="btn" onclick="openMembershipForm()">Join Now</button>
+        </div>
+
+        <!-- 6 Months -->
+        <div class="card" style="box-shadow:0 0 25px rgba(255,215,0,0.2);">
+            <h3 style="font-size:28px;">6 Months</h3>
+            <p style="font-size:42px; font-weight:bold;">₹5,499</p>
+            <p>Personal Workout Plan</p>
+            <p>Diet Guidance</p>
+            <p>Progress Tracking</p>
+            <button class="btn" onclick="openMembershipForm()">Join Now</button>
+        </div>
+
+        <!-- 12 Months -->
+        <div class="card">
+            <h3 style="font-size:28px;">12 Months</h3>
+            <p style="font-size:42px; font-weight:bold;">₹8,999</p>
+            <p>Personal Trainer Support</p>
+            <p>Free Diet Plan</p>
+            <p>Best Value</p>
+            <button class="btn" onclick="openMembershipForm()">Join Now</button>
+        </div>
+
+    </div>
+</section>
+<!-- Equipment Gallery Section -->
+<section id="gallery" style="padding:80px 20px; background:#111; text-align:center;">
+    <h2 style="font-size:42px; color:#FFD700; margin-bottom:20px;">Our Equipment Gallery</h2>
+    <p style="font-size:20px; color:#ddd; max-width:900px; margin:auto; line-height:1.8;">
+        At 9Star Gym, we provide all essential fitness equipment required for bodybuilding,
+        weight loss, strength training, and overall fitness transformation.
+    </p>
+
+    <!-- Equipment Cards -->
+    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:25px; margin-top:50px;">
+
+        <!-- Treadmills -->
+        <div style="width:300px; background:#1a1a1a; border:2px solid #FFD700; border-radius:20px; overflow:hidden;">
+            <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=800&q=80"
+                 alt="Treadmills"
+                 style="width:100%; height:220px; object-fit:cover;">
+            <h3 style="color:#FFD700; margin:20px 0 10px;">🏃 Treadmills</h3>
+            <p style="padding:0 20px 20px; color:#ddd;">High-quality treadmills for cardio, endurance, and fat loss.</p>
+        </div>
+
+        <!-- Cross Trainers -->
+        <div style="width:300px; background:#1a1a1a; border:2px solid #FFD700; border-radius:20px; overflow:hidden;">
+            <img src="https://images.unsplash.com/photo-1594737625785-a6cbdabd333c?auto=format&fit=crop&w=800&q=80"
+                 alt="Cross Trainers"
+                 style="width:100%; height:220px; object-fit:cover;">
+            <h3 style="color:#FFD700; margin:20px 0 10px;">🚴 Cross Trainers</h3>
+            <p style="padding:0 20px 20px; color:#ddd;">Low-impact cardio machines for full-body workouts.</p>
+        </div>
+
+        <!-- Exercise Bikes -->
+        <div style="width:300px; background:#1a1a1a; border:2px solid #FFD700; border-radius:20px; overflow:hidden;">
+            <img src="https://images.unsplash.com/photo-1594737625785-a6cbdabd333c?auto=format&fit=crop&w=800&q=80"
+                 alt="Exercise Bikes"
+                 style="width:100%; height:220px; object-fit:cover;">
+            <h3 style="color:#FFD700; margin:20px 0 10px;">🚲 Exercise Bikes</h3>
+            <p style="padding:0 20px 20px; color:#ddd;">Excellent for stamina building and calorie burning.</p>
+        </div>
+
+        <!-- Dumbbells -->
+        <div style="width:300px; background:#1a1a1a; border:2px solid #FFD700; border-radius:20px; overflow:hidden;">
+            <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80"
+                 alt="Dumbbells"
+                 style="width:100%; height:220px; object-fit:cover;">
+            <h3 style="color:#FFD700; margin:20px 0 10px;">🏋️ Dumbbells</h3>
+            <p style="padding:0 20px 20px; color:#ddd;">Complete dumbbell range for beginners to advanced lifters.</p>
+        </div>
+
+        <!-- Bench Press -->
+        <div style="width:300px; background:#1a1a1a; border:2px solid #FFD700; border-radius:20px; overflow:hidden;">
+            <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=800&q=80"
+                 alt="Bench Press"
+                 style="width:100%; height:220px; object-fit:cover;">
+            <h3 style="color:#FFD700; margin:20px 0 10px;">💪 Bench Press</h3>
+            <p style="padding:0 20px 20px; color:#ddd;">Professional flat, incline, and decline bench stations.</p>
+        </div>
+
+        <!-- Squat Rack -->
+        <div style="width:300px; background:#1a1a1a; border:2px solid #FFD700; border-radius:20px; overflow:hidden;">
+            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80"
+                 alt="Squat Rack"
+                 style="width:100%; height:220px; object-fit:cover;">
+            <h3 style="color:#FFD700; margin:20px 0 10px;">🏋️‍♂️ Squat Rack</h3>
+            <p style="padding:0 20px 20px; color:#ddd;">Heavy-duty racks for squats, deadlifts, and powerlifting.</p>
+        </div>
+
+        <!-- Cable Machine -->
+        <div style="width:300px; background:#1a1a1a; border:2px solid #FFD700; border-radius:20px; overflow:hidden;">
+            <img src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?auto=format&fit=crop&w=800&q=80"
+                 alt="Cable Machine"
+                 style="width:100%; height:220px; object-fit:cover;">
+            <h3 style="color:#FFD700; margin:20px 0 10px;">🔗 Cable Machine</h3>
+            <p style="padding:0 20px 20px; color:#ddd;">Versatile machine for chest, back, arms, and shoulders.</p>
+        </div>
+
+        <!-- Smith Machine -->
+        <div style="width:300px; background:#1a1a1a; border:2px solid #FFD700; border-radius:20px; overflow:hidden;">
+            <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80"
+                 alt="Smith Machine"
+                 style="width:100%; height:220px; object-fit:cover;">
+            <h3 style="color:#FFD700; margin:20px 0 10px;">⚙️ Smith Machine</h3>
+            <p style="padding:0 20px 20px; color:#ddd;">Safe guided lifting for strength and hypertrophy training.</p>
+        </div>
+
+        <!-- Leg Press -->
+        <div style="width:300px; background:#1a1a1a; border:2px solid #FFD700; border-radius:20px; overflow:hidden;">
+            <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=800&q=80"
+                 alt="Leg Press"
+                 style="width:100%; height:220px; object-fit:cover;">
+            <h3 style="color:#FFD700; margin:20px 0 10px;">🦵 Leg Press</h3>
+            <p style="padding:0 20px 20px; color:#ddd;">Build stronger quads, hamstrings, and glutes.</p>
+        </div>
+
+        <!-- Lat Pulldown -->
+        <div style="width:300px; background:#1a1a1a; border:2px solid #FFD700; border-radius:20px; overflow:hidden;">
+            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80"
+                 alt="Lat Pulldown"
+                 style="width:100%; height:220px; object-fit:cover;">
+            <h3 style="color:#FFD700; margin:20px 0 10px;">🪽 Lat Pulldown</h3>
+            <p style="padding:0 20px 20px; color:#ddd;">Essential machine for building a wide and strong back.</p>
+        </div>
+
+        <!-- Row Machine -->
+        <div style="width:300px; background:#1a1a1a; border:2px solid #FFD700; border-radius:20px; overflow:hidden;">
+            <img src="https://images.unsplash.com/photo-1593079831268-3381b0db4a77?auto=format&fit=crop&w=800&q=80"
+                 alt="Row Machine"
+                 style="width:100%; height:220px; object-fit:cover;">
+            <h3 style="color:#FFD700; margin:20px 0 10px;">🚣 Row Machine</h3>
+            <p style="padding:0 20px 20px; color:#ddd;">Great for cardio and full-body conditioning.</p>
+        </div>
+
+        <!-- Functional Training -->
+        <div style="width:300px; background:#1a1a1a; border:2px solid #FFD700; border-radius:20px; overflow:hidden;">
+            <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=800&q=80"
+                 alt="Functional Training"
+                 style="width:100%; height:220px; object-fit:cover;">
+            <h3 style="color:#FFD700; margin:20px 0 10px;">🤸 Functional Training Area</h3>
+            <p style="padding:0 20px 20px; color:#ddd;">Kettlebells, battle ropes, medicine balls, and more.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- Trainers -->
+<section id="trainers" class="center-text">
+    <h2 style="font-size:42px; color:#FFD700;">Our Expert Trainers</h2>
+
+    <div class="grid">
+        <div class="card">
+            <h3>Rahul Sharma</h3>
+            <p>Strength Coach</p>
+        </div>
+
+        <div class="card">
+            <h3>Vikram Singh</h3>
+            <p>Fat Loss Expert</p>
+        </div>
+
+        <div class="card">
+            <h3>Priya Verma</h3>
+            <p>Women's Fitness Expert</p>
+        </div>
+
+        <div class="card">
+            <h3>Anjali Kapoor</h3>
+            <p>Nutrition Coach</p>
+        </div>
+    </div>
+</section>
+
+<!-- Owner & Developer -->
+<section id="team" class="dark-section center-text">
+    <h2 style="font-size:42px; color:#FFD700;">Owner & Developer</h2>
+
+    <div class="grid">
+        <div class="card">
+            <h3>Owner</h3>
+            <p>Mr. Rajesh Kumar</p>
+            <p>Founder of 9Star Gym</p>
+        </div>
+
+        <div class="card">
+            <h3>Developer</h3>
+            <p>Manish Kumar</p>
+            <p>Full Stack .NET Developer</p>
+            <p>
+                <a href="https://www.linkedin.com" target="_blank" style="color:#FFD700;">LinkedIn</a> |
+                <a href="https://github.com" target="_blank" style="color:#FFD700;">GitHub</a>
+            </p>
+        </div>
+    </div>
+</section>
+<!-- BMI Calculator -->
+<section id="bmi" class="dark-section center-text">
+    <h2 style="font-size:42px; color:#FFD700; margin-bottom:20px;">BMI Calculator</h2>
+
+    <p style="font-size:18px; color:#ddd; max-width:700px; margin:auto; line-height:1.8;">
+        Enter your height in feet and inches and your weight in kilograms.
+    </p>
+
+    <div style="
+        max-width:450px;
+        margin:40px auto 0;
+        background:#1a1a1a;
+        padding:30px;
+        border-radius:20px;
+        border:2px solid #FFD700;
+        box-shadow:0 0 20px rgba(255,215,0,0.15);
+    ">
+
+        <!-- Height in Feet -->
+        <input
+            id="heightFeet"
+            type="number"
+            min="1"
+            max="8"
+            placeholder="Height (Feet)"
+            style="
+                width:90%;
+                padding:12px;
+                margin:10px 0;
+                border:none;
+                border-radius:10px;
+                font-size:16px;
+            ">
+
+        <!-- Height in Inches -->
+        <input
+            id="heightInches"
+            type="number"
+            min="0"
+            max="11"
+            placeholder="Height (Inches)"
+            style="
+                width:90%;
+                padding:12px;
+                margin:10px 0;
+                border:none;
+                border-radius:10px;
+                font-size:16px;
+            ">
+
+        <!-- Weight -->
+        <input
+            id="weightKg"
+            type="number"
+            min="1"
+            placeholder="Weight (kg)"
+            style="
+                width:90%;
+                padding:12px;
+                margin:10px 0;
+                border:none;
+                border-radius:10px;
+                font-size:16px;
+            ">
+
+        <!-- Button -->
+        <button
+            class="btn"
+            type="button"
+            onclick="calculateBMI()">
+            Calculate BMI
+        </button>
+
+        <!-- Result -->
+        <h3
+            id="bmiResult"
+            style="
+                margin-top:25px;
+                color:#FFD700;
+                font-size:24px;
+            ">
+        </h3>
+
+        <p
+            id="bmiMessage"
+            style="
+                color:#ddd;
+                font-size:16px;
+                line-height:1.6;
+            ">
+        </p>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="dark-section center-text">
+    <h2 style="font-size:42px; color:#FFD700; margin-bottom:25px;">
+        Contact Us
+    </h2>
+
+    <!-- Contact Details in One Row on Desktop, Stack on Mobile -->
+    <div style="
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+        align-items:center;
+        gap:25px;
+        max-width:1200px;
+        margin:0 auto;
+        font-size:20px;
+        color:#ddd;
+        line-height:1.8;
+    ">
+        <div>📍 Mithapur, Patna, Bihar</div>
+        <div>📞 +91 98765 43210</div>
+        <div>📧 info@9stargym.com</div>
+    </div>
+
+    <!-- WhatsApp Button -->
+    <button
+        style="
+            margin-top:30px;
+            padding:15px 30px;
+            background:#25D366;
+            color:white;
+            border:none;
+            border-radius:50px;
+            font-size:18px;
+            font-weight:bold;
+            cursor:pointer;
+        "
+        onclick="window.open('https://wa.me/918340685926','_blank')">
+        Chat on WhatsApp
+    </button>
+</section>
+<!-- Footer -->
+<footer style="
+    background:black;
+    text-align:center;
+    padding:25px;
+    color:#999;
+">
+    © 2026 9Star Gym. All Rights Reserved.
+</footer>
+
+<!-- Floating WhatsApp -->
+<a
+    href="https://wa.me/918340685926"
+    target="_blank"
+    class="floating-whatsapp">
+    💬
+</a>
+
+<!-- JavaScript -->
+<script>
+function calculateBMI() {
+    // Get values
+    var feet = parseFloat(document.getElementById("heightFeet").value);
+    var inches = parseFloat(document.getElementById("heightInches").value);
+    var weight = parseFloat(document.getElementById("weightKg").value);
+
+    // If inches is empty, treat as 0
+    if (isNaN(inches)) {
+        inches = 0;
+    }
+
+    // Validation
+    if (isNaN(feet) || feet <= 0 || isNaN(weight) || weight <= 0) {
+        document.getElementById("bmiResult").innerHTML =
+            "Please enter valid height and weight.";
+        document.getElementById("bmiMessage").innerHTML = "";
+        return;
+    }
+
+    if (inches < 0 || inches > 11) {
+        document.getElementById("bmiResult").innerHTML =
+            "Inches must be between 0 and 11.";
+        document.getElementById("bmiMessage").innerHTML = "";
+        return;
+    }
+
+    // Convert feet + inches to total inches
+    var totalInches = (feet * 12) + inches;
+
+    // Convert inches to meters
+    var heightMeters = totalInches * 0.0254;
+
+    // Calculate BMI
+    var bmi = weight / (heightMeters * heightMeters);
+
+    // Determine category
+    var category = "";
+    var message = "";
+
+    if (bmi < 18.5) {
+        category = "Underweight";
+        message = "You may need to gain some healthy weight.";
+    } else if (bmi < 25) {
+        category = "Normal Weight";
+        message = "Excellent! Your weight is in the healthy range.";
+    } else if (bmi < 30) {
+        category = "Overweight";
+        message = "Regular exercise and a balanced diet can help.";
+    } else {
+        category = "Obese";
+        message = "Consider a structured fitness and nutrition plan.";
+    }
+
+    // Display result
+    document.getElementById("bmiResult").innerHTML =
+        "Your BMI: " + bmi.toFixed(1) + " (" + category + ")";
+
+    document.getElementById("bmiMessage").innerHTML = message;
+}
+</script>
+
+</body>
+</html>

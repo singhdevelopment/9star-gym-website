@@ -469,25 +469,30 @@
         </div>
 
         <!-- Developer Card -->
-        <div class="card">
-            <h3>Developer</h3>
-            <p><strong>Puspraj Singh Kashyap</strong></p>
-            <p>Full Stack .NET Developer</p>
-
-            <p style="margin-top:15px;">
-                <a href="https://in.linkedin.com/in/puspraj-singh-kashyap"
-                   target="_blank"
-                   style="color:#FFD700; text-decoration:none; font-weight:bold;">
-                    LinkedIn
-                </a>
-                |
-                <a href="https://www.instagram.com/puspraj_singh_kashyap/"
-                   target="_blank"
-                   style="color:#FFD700; text-decoration:none; font-weight:bold;">
-                    Instagram
-                </a>
-            </p>
-        </div>
+		<div class="card">
+			<a
+				href="https://singhdevelopment.github.io/pusprajkumar/"
+				target="_blank"
+				style="
+					display:block;
+					text-decoration:none;
+					color:inherit;
+				">
+				<h3>Developer</h3>
+				<p><strong>Puspraj Singh Kashyap</strong></p>
+				<p>Full Stack .NET Developer</p>
+		
+				<p style="color:#FFD700; font-weight:bold; margin-top:15px;">
+					🌐 Visit Developer Portfolio
+				</p>
+		
+				<p style="margin-top:15px;">
+					<span style="color:#FFD700; font-weight:bold;">LinkedIn</span>
+					|
+					<span style="color:#FFD700; font-weight:bold;">Instagram</span>
+				</p>
+			</a>
+		</div>
 
     </div>
 <!-- BMI Calculator -->
@@ -590,22 +595,54 @@
         Contact Us
     </h2>
 
-    <!-- Contact Details in One Row on Desktop, Stack on Mobile -->
+    <!-- Contact Details -->
     <div style="
         display:flex;
         flex-wrap:wrap;
         justify-content:center;
         align-items:center;
-        gap:25px;
+        gap:15px;
         max-width:1200px;
         margin:0 auto;
         font-size:20px;
         color:#ddd;
         line-height:1.8;
     ">
-        <div>📍 A/2 Housing Colony Lohia Nagar, Kankarbagh Rd, Kankarbagh, Patna, Bihar 800020</div>
-        <div>📞 +91 95046 71969</div>
-        <div>📧 info@9stargym.com</div>
+        <!-- Address -->
+        <div>
+            📍 A/2 Housing Colony Lohia Nagar, Kankarbagh Rd,
+            Kankarbagh, Patna, Bihar 800020
+        </div>
+
+        <!-- Clickable Phone Number -->
+        <div>
+            📞
+            <a
+                href="tel:+919504671969"
+                style="
+                    color:#FFD700;
+                    text-decoration:none;
+                    font-weight:bold;
+                "
+            >
+                +91 95046 71969
+            </a>
+        </div>
+
+        <!-- Email -->
+        <div>
+            📧
+            <a
+                href="mailto:info@9stargym.com"
+                style="
+                    color:#FFD700;
+                    text-decoration:none;
+                    font-weight:bold;
+                "
+            >
+                info@9stargym.com
+            </a>
+        </div>
     </div>
 
     <!-- WhatsApp Button -->
@@ -625,19 +662,75 @@
         Chat on WhatsApp
     </button>
 </section>
+
 <!-- Footer -->
 <footer style="
-    background:black;
-    text-align:center;
-    padding:25px;
-    color:#999;
+    background: linear-gradient(135deg, #000000, #111111);
+    text-align: center;
+    padding: 35px 20px;
+    color: #999;
+    border-top: 2px solid #FFD700;
 ">
-    © 2026 9Star Gym. All Rights Reserved.
+    <!-- Copyright Text -->
+    <p style="
+        margin: 0;
+        font-size: 16px;
+        line-height: 1.8;
+    ">
+        © 2026 9Star Gym. All Rights Reserved.
+    </p>
+
+    <!-- Developer Chat Button -->
+    <div style="margin-top: 25px;">
+        <a
+            href="https://t.me/YOUR_TELEGRAM_USERNAME"
+            target="_blank"
+            style="
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                background: linear-gradient(135deg, #0088cc, #00a2ff);
+                color: #ffffff;
+                text-decoration: none;
+                padding: 14px 32px;
+                border-radius: 50px;
+                font-size: 17px;
+                font-weight: bold;
+                letter-spacing: 0.5px;
+                box-shadow: 0 8px 25px rgba(0, 136, 204, 0.45);
+                border: 2px solid rgba(255,255,255,0.15);
+                transition: all 0.3s ease;
+            "
+            onmouseover="
+                this.style.transform='translateY(-3px) scale(1.05)';
+                this.style.boxShadow='0 12px 30px rgba(0,136,204,0.6)';
+            "
+            onmouseout="
+                this.style.transform='translateY(0) scale(1)';
+                this.style.boxShadow='0 8px 25px rgba(0,136,204,0.45)';
+            "
+        >
+            <span style="font-size: 22px;">🚀</span>
+            <span>Chat with Developer</span>
+        </a>
+    </div>
+
+    <!-- Developer Name -->
+    <p style="
+        margin-top: 15px;
+        font-size: 14px;
+        color: #FFD700;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+    ">
+        Developed by Puspraj Singh Kashyap
+    </p>
 </footer>
 
 <!-- Floating WhatsApp -->
 <a
-    href="https://wa.me/918340685926"
+    href="https://wa.me/919504671969"
     target="_blank"
     class="floating-whatsapp">
     💬

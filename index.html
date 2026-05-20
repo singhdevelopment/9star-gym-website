@@ -951,6 +951,7 @@ function calculateBMI() {
             <button onclick="showChatbotResponse('location')">📍 Location</button>
             <button onclick="showChatbotResponse('timing')">🕒 Gym Timings</button>
             <button onclick="showChatbotResponse('payment')">💳 Payment Options</button>
+			<button onclick="showChatbotResponse('developer')">👨‍💻 Talk with Developer</button>
         </div>
 
         <div class="chatbot-response" id="chatbotResponse"></div>
@@ -1024,6 +1025,28 @@ function showChatbotResponse(type) {
                 • Pay at Gym (Cash/UPI/Card)<br>
                 • Pay After Visiting the Gym
             `;
+
+		case 'developer':
+            html = `
+                <strong>Connect with the Developer:</strong><br><br>
+                Need a website, mobile app, or custom software?<br><br>
+
+                <a href="https://t.me/pusprajsinghkashyap"
+                   target="_blank"
+                   style="
+                       display:inline-block;
+                       background:#0088cc;
+                       color:#ffffff;
+                       text-decoration:none;
+                       padding:10px 18px;
+                       border-radius:30px;
+                       font-weight:bold;
+                       margin-top:10px;
+                   ">
+                   🚀 Chat on Telegram
+                </a>
+            `;
+            break;
             break;
     }
 

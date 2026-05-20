@@ -705,6 +705,238 @@ function calculateBMI() {
     document.getElementById("bmiMessage").innerHTML = message;
 }
 </script>
+<!-- ================================
+     FLOATING CHATBOT BUTTON (LEFT SIDE)
+     Place this code just before </body>
+================================ -->
+<style>
+/* Floating Chat Button */
+.chatbot-toggle {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    width: 65px;
+    height: 65px;
+    background: linear-gradient(135deg, #FFD700, #ffb300);
+    color: #000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    cursor: pointer;
+    z-index: 9999;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.35);
+    transition: all 0.3s ease;
+}
 
+.chatbot-toggle:hover {
+    transform: scale(1.1);
+}
+
+/* Chat Window */
+.chatbot-window {
+    position: fixed;
+    left: 20px;
+    bottom: 100px;
+    width: 340px;
+    max-width: calc(100vw - 40px);
+    background: #111;
+    border: 2px solid #FFD700;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+    z-index: 9999;
+    display: none;
+}
+
+/* Header */
+.chatbot-header {
+    background: linear-gradient(135deg, #FFD700, #ffb300);
+    color: #000;
+    padding: 15px 20px;
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chatbot-close {
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Body */
+.chatbot-body {
+    padding: 20px;
+    color: #fff;
+}
+
+.chatbot-message {
+    background: #1f1f1f;
+    padding: 15px;
+    border-radius: 15px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    color: #ddd;
+}
+
+/* Options */
+.chatbot-options button {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px 15px;
+    background: #FFD700;
+    color: #000;
+    border: none;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: left;
+    transition: 0.3s;
+}
+
+.chatbot-options button:hover {
+    background: #ffca00;
+    transform: translateX(4px);
+}
+
+/* Response */
+.chatbot-response {
+    margin-top: 15px;
+    padding: 15px;
+    background: #1a1a1a;
+    border-left: 4px solid #FFD700;
+    border-radius: 10px;
+    line-height: 1.7;
+    color: #eee;
+    display: none;
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+    .chatbot-window {
+        left: 10px;
+        right: 10px;
+        width: auto;
+        bottom: 90px;
+    }
+
+    .chatbot-toggle {
+        left: 15px;
+        bottom: 15px;
+        width: 60px;
+        height: 60px;
+        font-size: 28px;
+    }
+}
+</style>
+
+<!-- Floating Chat Button -->
+<div class="chatbot-toggle" onclick="toggleChatbot()">
+    🤖
+</div>
+
+<!-- Chat Window -->
+<div class="chatbot-window" id="chatbotWindow">
+    <div class="chatbot-header">
+        <span>9Star Gym Assistant</span>
+        <span class="chatbot-close" onclick="toggleChatbot()">×</span>
+    </div>
+
+    <div class="chatbot-body">
+        <div class="chatbot-message">
+            👋 Hi! How may I help you today?
+        </div>
+
+        <div class="chatbot-options">
+            <button onclick="showChatbotResponse('plans')">💰 Membership Plans</button>
+            <button onclick="showChatbotResponse('contact')">📞 Contact Number</button>
+            <button onclick="showChatbotResponse('whatsapp')">💬 WhatsApp</button>
+            <button onclick="showChatbotResponse('location')">📍 Location</button>
+            <button onclick="showChatbotResponse('timing')">🕒 Gym Timings</button>
+            <button onclick="showChatbotResponse('payment')">💳 Payment Options</button>
+        </div>
+
+        <div class="chatbot-response" id="chatbotResponse"></div>
+    </div>
+</div>
+
+<script>
+function toggleChatbot() {
+    const chatbot = document.getElementById('chatbotWindow');
+    chatbot.style.display =
+        chatbot.style.display === 'block' ? 'none' : 'block';
+}
+
+function showChatbotResponse(type) {
+    const response = document.getElementById('chatbotResponse');
+    let html = '';
+
+    switch(type) {
+        case 'plans':
+            html = `
+                <strong>Membership Plans:</strong><br>
+                • 1 Month – ₹1,499<br>
+                • 3 Months – ₹3,499<br>
+                • 6 Months – ₹5,499<br>
+                • 12 Months – ₹8,999
+            `;
+            break;
+
+        case 'contact':
+            html = `
+                <strong>Contact Number:</strong><br>
+                +91 98765 43210
+            `;
+            break;
+
+        case 'whatsapp':
+            html = `
+                <strong>WhatsApp:</strong><br>
+                <a href="https://wa.me/919876543210"
+                   target="_blank"
+                   style="color:#FFD700; font-weight:bold;">
+                   Chat on WhatsApp
+                </a>
+            `;
+            break;
+
+        case 'location':
+            html = `
+                <strong>Location:</strong><br>
+                Kankarbagh, Patna, Bihar<br><br>
+                <a href="https://maps.google.com/?q=9Star+Gym+Kankarbagh+Patna"
+                   target="_blank"
+                   style="color:#FFD700; font-weight:bold;">
+                   Open in Google Maps
+                </a>
+            `;
+            break;
+
+        case 'timing':
+            html = `
+                <strong>Gym Timings:</strong><br>
+                Monday to Saturday: 5:00 AM – 10:00 PM<br>
+                Sunday: 6:00 AM – 2:00 PM
+            `;
+            break;
+
+        case 'payment':
+            html = `
+                <strong>Payment Options:</strong><br>
+                • Pay Online Now<br>
+                • Pay at Gym (Cash/UPI/Card)<br>
+                • Pay After Visiting the Gym
+            `;
+            break;
+    }
+
+    response.innerHTML = html;
+    response.style.display = 'block';
+}
+</script>
 </body>
 </html>

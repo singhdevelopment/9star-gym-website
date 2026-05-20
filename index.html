@@ -935,6 +935,35 @@ function calculateBMI() {
         font-size: 28px;
     }
 }
+	/* ================================
+   DARK SCROLLBAR FOR CHATBOT
+================================ */
+
+/* Chrome, Edge, Safari */
+.chatbot-window::-webkit-scrollbar {
+    width: 10px;
+}
+
+.chatbot-window::-webkit-scrollbar-track {
+    background: #111;
+    border-radius: 10px;
+}
+
+.chatbot-window::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 10px;
+    border: 2px solid #111;
+}
+
+.chatbot-window::-webkit-scrollbar-thumb:hover {
+    background: #FFD700;
+}
+
+/* Firefox */
+.chatbot-window {
+    scrollbar-width: thin;
+    scrollbar-color: #444 #111;
+}
 </style>
 
 <!-- Floating Chat Button -->

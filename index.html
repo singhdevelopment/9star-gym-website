@@ -841,16 +841,22 @@ function calculateBMI() {
     z-index: 9999;
     display: none;
 
-    /* Keep chatbot from becoming too tall */
+    /* IMPORTANT SETTINGS */
     max-height: 80vh;
-
-    /* Allow scrolling inside chatbot */
     overflow-y: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
 
-    /* Smooth scrolling on mobile */
+    /* Keep scrollbar inside */
+    scrollbar-gutter: stable;
+
+    /* Firefox Dark Scrollbar */
+    scrollbar-width: thin;
+    scrollbar-color: #444 #111;
+
+    /* Smooth scrolling */
     -webkit-overflow-scrolling: touch;
 }
-
 /* Header */
 .chatbot-header {
     position: sticky;

@@ -837,14 +837,25 @@ function calculateBMI() {
     background: #111;
     border: 2px solid #FFD700;
     border-radius: 20px;
-    overflow: hidden;
     box-shadow: 0 10px 30px rgba(0,0,0,0.45);
     z-index: 9999;
     display: none;
+
+    /* Keep chatbot from becoming too tall */
+    max-height: 80vh;
+
+    /* Allow scrolling inside chatbot */
+    overflow-y: auto;
+
+    /* Smooth scrolling on mobile */
+    -webkit-overflow-scrolling: touch;
 }
 
 /* Header */
 .chatbot-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
     background: linear-gradient(135deg, #FFD700, #ffb300);
     color: #000;
     padding: 15px 20px;
@@ -854,7 +865,6 @@ function calculateBMI() {
     justify-content: space-between;
     align-items: center;
 }
-
 .chatbot-close {
     cursor: pointer;
     font-size: 24px;

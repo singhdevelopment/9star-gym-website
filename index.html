@@ -1062,13 +1062,29 @@ function showChatbotResponse(type) {
             break;
 
         case 'payment':
-            html = `
-                <strong>Payment Options:</strong><br>
-                • Pay Online Now<br>
-                • Pay at Gym (Cash/UPI/Card)<br>
-                • Pay After Visiting the Gym
-            `;
-    	   break;
+    html = `
+        <strong>Payment Options:</strong><br><br>
+
+        <a href="upi://pay?pa=9504671969@ybl&pn=9StarGym&cu=INR"
+           style="
+               display:inline-block;
+               background:#25D366;
+               color:#fff;
+               text-decoration:none;
+               padding:12px 20px;
+               border-radius:30px;
+               font-weight:bold;
+               margin-top:10px;
+           ">
+           💳 Pay Online Now
+        </a>
+
+        <br><br>
+
+        • Pay at Gym (Cash/UPI/Card)<br>
+        • Pay After Visiting the Gym
+    `;
+    break;
 		case 'developer':
             html = `
                 <strong>Connect with the Developer:</strong><br><br>

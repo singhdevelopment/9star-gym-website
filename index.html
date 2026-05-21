@@ -463,7 +463,7 @@
         <!-- Owner Card -->
         <div class="card">
             <h3>Owner</h3>
-            <p><strong>Mr. Rajesh Kumar</strong></p>
+            <p><strong>Abhishek Kumar</strong></p>
             <p>Founder of 9Star Gym</p>
             <p>Dedicated to helping people achieve their fitness goals.</p>
         </div>
@@ -1007,10 +1007,6 @@ function toggleChatbot() {
     chatbot.style.display =
         chatbot.style.display === 'block' ? 'none' : 'block';
 }
-	function openUPIPayment() {
-    window.location.href =
-    "upi://pay?pa=9504671969@ybl&pn=9StarGym&cu=INR";
-}
 
 function showChatbotResponse(type) {
     const response = document.getElementById('chatbotResponse');
@@ -1069,19 +1065,21 @@ function showChatbotResponse(type) {
     html = `
         <strong>Payment Options:</strong><br><br>
 
-        <a href="upi://pay?pa=9504671969@ybl&pn=9StarGym&cu=INR"
-           style="
-               display:inline-block;
-               background:#25D366;
-               color:#fff;
-               text-decoration:none;
-               padding:12px 20px;
-               border-radius:30px;
-               font-weight:bold;
-               margin-top:10px;
-           ">
-           💳 Pay Online Now
-        </a>
+        <button
+            onclick="window.location.href='upi://pay?pa=9504671969@ybl&pn=9StarGym&cu=INR'"
+            style="
+                display:inline-block;
+                background:#25D366;
+                color:#fff;
+                border:none;
+                padding:12px 20px;
+                border-radius:30px;
+                font-weight:bold;
+                margin-top:10px;
+                cursor:pointer;
+            ">
+            💳 Pay Online Now
+        </button>
 
         <br><br>
 
@@ -1089,6 +1087,7 @@ function showChatbotResponse(type) {
         • Pay After Visiting the Gym
     `;
     break;
+			
 		case 'developer':
             html = `
                 <strong>Connect with the Developer:</strong><br><br>

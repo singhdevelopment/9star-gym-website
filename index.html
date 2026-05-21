@@ -1061,30 +1061,28 @@ function showChatbotResponse(type) {
             `;
             break;
 
-       case 'payment':
-    html = `
-        <strong>Scan & Pay</strong><br><br>
+		case 'payment':
+    	html = `
+        <strong>Payment Options:</strong><br><br>
 
-        <img
-            src="YOUR_QR_IMAGE_LINK_HERE"
-            alt="UPI QR"
+        <button
+            onclick="showOnlinePayment()"
             style="
-                width:220px;
-                max-width:100%;
-                border-radius:15px;
-                border:3px solid #FFD700;
-                margin-bottom:15px;
-            "
-        >
+                width:100%;
+                margin-bottom:10px;
+                padding:12px 15px;
+                background:#FFD700;
+                color:#000;
+                border:none;
+                border-radius:12px;
+                font-weight:bold;
+                cursor:pointer;
+            ">
+            💳 Pay Online Now
+        </button>
 
-        <br>
-
-        <strong>UPI ID:</strong><br>
-        9504671969@ybl
-
-        <br><br>
-
-        • Scan using Paytm, PhonePe or GPay
+        • Pay at Gym (Cash/UPI/Card)<br>
+        • Pay After Visiting the Gym
     `;
     break;
 			
@@ -1113,6 +1111,38 @@ function showChatbotResponse(type) {
 
     response.innerHTML = html;
     response.style.display = 'block';
+	setTimeout(() => {
+    toggleChatbot();
+}, 300);
+}
+	function showOnlinePayment() {
+
+    const response = document.getElementById('chatbotResponse');
+
+    response.innerHTML = `
+        <strong>Scan & Pay</strong><br><br>
+
+        <img
+            src="YOUR_QR_IMAGE_LINK_HERE"
+            alt="UPI QR"
+            style="
+                width:220px;
+                max-width:100%;
+                border-radius:15px;
+                border:3px solid #FFD700;
+                margin-bottom:15px;
+            "
+        >
+
+        <br>
+
+        <strong>UPI ID:</strong><br>
+        9504671969@ybl
+
+        <br><br>
+
+        • Scan using Paytm, PhonePe or Google Pay
+    `;
 }
 </script>
 	<!-- =========================================

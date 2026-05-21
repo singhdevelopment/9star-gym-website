@@ -1007,6 +1007,10 @@ function toggleChatbot() {
     chatbot.style.display =
         chatbot.style.display === 'block' ? 'none' : 'block';
 }
+	function openUPIPayment() {
+    window.location.href =
+    "upi://pay?pa=9504671969@ybl&pn=9StarGym&cu=INR";
+}
 
 function showChatbotResponse(type) {
     const response = document.getElementById('chatbotResponse');

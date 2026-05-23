@@ -1029,18 +1029,26 @@ function toggleChatbot() {
         chatbot.style.display === 'block' ? 'none' : 'block';
 }
 
-function showChatbotResponse(type) {
-     const response = document.getElementById('chatbotResponse');
+let currentOpenType = "";
 
-    // If same button clicked again → hide response
-    if (currentOpenType === type && response.style.display === 'block') {
-        response.style.display = 'none';
-        currentOpenType = "";
-        return;
+function showChatbotResponse(type) {
+
+    const response = document.getElementById('chatbotResponse');
+
+    // Toggle hide if same button clicked
+    if (currentOpenType === type) {
+
+        if (response.style.display === 'block') {
+            response.style.display = 'none';
+            currentOpenType = "";
+            return;
+        }
     }
+
     let html = '';
 
     switch(type) {
+
         case 'plans':
             html = `
                 <strong>Membership Plans:</strong><br>
@@ -1054,14 +1062,15 @@ function showChatbotResponse(type) {
         case 'contact':
             html = `
                 <strong>Contact Number:</strong><br>
-                +91 98765 43210
+                +91 95046 71969
             `;
             break;
 
         case 'whatsapp':
             html = `
                 <strong>WhatsApp:</strong><br>
-                <a href="https://wa.me/919876543210"
+
+                <a href="https://wa.me/919504671969"
                    target="_blank"
                    style="color:#FFD700; font-weight:bold;">
                    Chat on WhatsApp
@@ -1073,6 +1082,7 @@ function showChatbotResponse(type) {
             html = `
                 <strong>Location:</strong><br>
                 Kankarbagh, Patna, Bihar<br><br>
+
                 <a href="https://maps.google.com/?q=9Star+Gym+Kankarbagh+Patna"
                    target="_blank"
                    style="color:#FFD700; font-weight:bold;">
@@ -1089,35 +1099,34 @@ function showChatbotResponse(type) {
             `;
             break;
 
-		case 'payment':
-    	html = `
-        <strong>Payment Options:</strong><br><br>
+        case 'payment':
+            html = `
+                <strong>Payment Options:</strong><br><br>
 
-        <button
-            onclick="showOnlinePayment()"
-            style="
-                width:100%;
-                margin-bottom:10px;
-                padding:12px 15px;
-                background:#FFD700;
-                color:#000;
-                border:none;
-                border-radius:12px;
-                font-weight:bold;
-                cursor:pointer;
-            ">
-            💳 Pay Online Now
-        </button>
+                <button
+                    onclick="showOnlinePayment()"
+                    style="
+                        width:100%;
+                        margin-bottom:10px;
+                        padding:12px 15px;
+                        background:#FFD700;
+                        color:#000;
+                        border:none;
+                        border-radius:12px;
+                        font-weight:bold;
+                        cursor:pointer;
+                    ">
+                    💳 Pay Online Now
+                </button>
 
-        • Pay at Gym (Cash/UPI/Card)<br>
-        • Pay After Visiting the Gym
-    `;
-    break;
-			
-		case 'developer':
+                • Pay at Gym (Cash/UPI/Card)<br>
+                • Pay After Visiting the Gym
+            `;
+            break;
+
+        case 'developer':
             html = `
                 <strong>Connect with the Developer:</strong><br><br>
-                Need a website, mobile app, or custom software?<br><br>
 
                 <a href="https://t.me/pusprajsinghkashyap"
                    target="_blank"
@@ -1129,7 +1138,6 @@ function showChatbotResponse(type) {
                        padding:10px 18px;
                        border-radius:30px;
                        font-weight:bold;
-                       margin-top:10px;
                    ">
                    🚀 Chat on Telegram
                 </a>
@@ -1137,9 +1145,11 @@ function showChatbotResponse(type) {
             break;
     }
 
-   response.innerHTML = html;
-    // Show response
+    response.innerHTML = html;
+
+    // Always show after content update
     response.style.display = 'block';
+
     // Save current open section
     currentOpenType = type;
 }

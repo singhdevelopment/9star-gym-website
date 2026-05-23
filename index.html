@@ -1030,7 +1030,14 @@ function toggleChatbot() {
 }
 
 function showChatbotResponse(type) {
-    const response = document.getElementById('chatbotResponse');
+     const response = document.getElementById('chatbotResponse');
+
+    // If same button clicked again → hide response
+    if (currentOpenType === type && response.style.display === 'block') {
+        response.style.display = 'none';
+        currentOpenType = "";
+        return;
+    }
     let html = '';
 
     switch(type) {
@@ -1130,11 +1137,11 @@ function showChatbotResponse(type) {
             break;
     }
 
-    response.innerHTML = html;
+   response.innerHTML = html;
+    // Show response
     response.style.display = 'block';
-	setTimeout(() => {
-    toggleChatbot();
-}, 300);
+    // Save current open section
+    currentOpenType = type;
 }
 	function showOnlinePayment() {
 
